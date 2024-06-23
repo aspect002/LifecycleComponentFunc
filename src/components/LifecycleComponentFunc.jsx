@@ -17,11 +17,10 @@ const LifecycleComponentFunc = () => {
         if (count % 2 === 0) {
             console.log('Компонент обновлен, значение count:', count);
         }
-    }, [count]);//передаём зависимость count чтобы компонент ререндерился только при четных числах
+    }, [count]);//передаём зависимость count чтобы компонент ререндерился только при четных числах */
 
     useEffect(() => {
-        console.log('---WillUnmount---');
-        console.log('Компонент LifecycleComponent скоро удалится');;
+        return () => console.log('---WillUnmount---');
     }, []);//пустая зависимость т.к. выводим только лог для удаления компонента из дом и возвращения его
 
     const changeIncrement = () => {
@@ -33,7 +32,7 @@ const LifecycleComponentFunc = () => {
             <h1>LifecycleComponent</h1>
             <p>Значение count:  {count % 2 === 0 ? count : count - 1}</p>
             <button onClick={changeIncrement}>Увеличить count</button>
-            {count %2 === 0 ? <div><p>Число четное</p></div> : <p>Число нечетное, тыкни ещё.</p> }
+            {/*    {count % 2 === 0 ? <div><p>Число четное</p></div> : <p>Число нечетное, тыкни ещё.</p>} */}
         </div>
     );
 };

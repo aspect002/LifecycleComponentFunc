@@ -1,14 +1,11 @@
-
 import './App.css';
-
-import LifecycleComponentFunc from './components/git init';
+import TrueOrFalse from './components/TrueOrFalse';
 
 function App() {
 
   return (
     <div className="App">
-<LifecycleComponentFunc/>
-
+      <TrueOrFalse />
     </div>
   );
 }
